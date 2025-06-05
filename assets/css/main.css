@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+	--background-color: var(--color-gray-100);
+	--text-color: var(--color-black);
+	--invert-background: 0;
+}
+
+.dark {
+	--background-color: var(--color-stone-950);
+	--text-color: var(--color-white);
+	--invert-background: 1;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+.-rotate-1 {
+	rotate: -1deg;
+}
+
+.-rotate-2 {
+	rotate: -2deg;
+}
+
+.-rotate-3 {
+	rotate: -3deg;
+}
+
+.-rotate-4 {
+	rotate: -4deg;
+}
+
+.-rotate-5 {
+	rotate: -5deg;
+}
+
+.rotate-1 {
+	rotate: 1deg;
+}
+
+.rotate-2 {
+	rotate: 2deg;
+}
+
+.rotate-3 {
+	rotate: 3deg;
+}
+
+.rotate-4 {
+	rotate: 4deg;
+}
+
+.rotate-5 {
+	rotate: 5deg;
+}
