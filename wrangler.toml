@@ -1,0 +1,6 @@
+name = "p5tg"
+main = ".output/server/index.mjs"
+compatibility_date = "2025-06-05"
+
+[assets]
+directory = ".output/public"
