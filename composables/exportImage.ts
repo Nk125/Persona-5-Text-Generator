@@ -27,13 +27,22 @@ export const exportImage = (target: Element, imageType: string) => {
 		});
 	};
 
+	const downloadImage = (uri: string, fileName: string) => {
+		if (window.saveAs !== undefined) {
+			window.saveAs(uri, fileName);
+		}
+		else {
+			saveAs(uri, fileName);
+		}
+	}
+
 	const targetElement = target as HTMLElement;
 
 	switch (imageType) {
 		case "png":
 			toPng(targetElement, { quality: 1 })
 				.then((pngUri: string) => {
-					saveAs(pngUri, `${generatedTextFileName}.png`);
+					downloadImage(pngUri, `${generatedTextFileName}.png`);
 					successReporter();
 				})
 				.catch(errorReporter);
@@ -41,7 +50,7 @@ export const exportImage = (target: Element, imageType: string) => {
 		case "jpeg":
 			toJpeg(targetElement, { quality: 1 })
 				.then((jpegUri: string) => {
-					saveAs(jpegUri, `${generatedTextFileName}.jpeg`);
+					downloadImage(jpegUri, `${generatedTextFileName}.jpeg`);
 					successReporter();
 				})
 				.catch(errorReporter);
