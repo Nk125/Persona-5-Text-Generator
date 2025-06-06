@@ -3,6 +3,9 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-05-15",
 	modules: ["@nuxt/ui", "@nuxt/fonts", "@nuxtjs/tailwindcss", "@nuxt/eslint"],
 	css: ["@/assets/css/main.css"],
+	routeRules: {
+		"/**": { cors: true },
+	},
 	fonts: {
 		families: [
 			{ name: "Roboto", provider: "google" },
