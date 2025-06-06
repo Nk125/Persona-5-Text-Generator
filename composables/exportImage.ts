@@ -30,11 +30,10 @@ export const exportImage = (target: Element, imageType: string) => {
 	const downloadImage = (uri: string, fileName: string) => {
 		if (window.saveAs !== undefined) {
 			window.saveAs(uri, fileName);
-		}
-		else {
+		} else {
 			saveAs(uri, fileName);
 		}
-	}
+	};
 
 	const targetElement = target as HTMLElement;
 
